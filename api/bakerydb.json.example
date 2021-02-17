@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Cake"
+    },
+    {
+      "id": 2,
+      "name": "Bread"
+    },
+    {
+      "id": 3,
+      "name": "Drink"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "customerId": 4,
+      "productId": 1,
+      "text": "Great!",
+      "rating": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Red Velvet",
+      "price": 35.99,
+      "description": "Red velvet cake is traditionally a red, red-brown, crimson or scarlet-colored chocolate layer cake, layered with ermine icing.",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Mango Creme Brulee",
+      "price": 49.99,
+      "description": "Vanilla sponge cake layered with vanilla brulee and mango mousse. Decorated with fresh mango, strawberries, chocolate, and mango cream.",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Multigrain",
+      "price": 16.99,
+      "description": "Multigrain bread is a type of bread prepared with two or more types of grain. Grains used include barley, flax, millet, oats, wheat, and whole-wheat flour, among others.",
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "French Garlic Cheese",
+      "price": 19.99,
+      "description": "French bread, mozzarella cheese, parmesan cheese, garlic, olive oil.",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "name": "Hazelnut Latte",
+      "price": 9.89,
+      "description": "Delicious homemade hazelnut milk flavored with maple, cinnamon, nutmeg & vanilla is perfect with coffee or espresso!",
+      "categoryId": 3
+    },
+    {
+      "id": 6,
+      "name": "Caramel Macchiato",
+      "price": 11.89,
+      "description": "Freshly steamed milk with vanilla-flavored syrup marked with espresso and topped with a caramel drizzle for an oh-so-sweet finish.",
+      "categoryId": 3
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Twig Mistyclover",
+      "rewardsMember": true,
+      "email": "twigmc@amail.com",
+      "password": "twig"
+    },
+    {
+      "id": 2,
+      "name": "Frost Muddyriver",
+      "rewardsMember": false,
+      "email": "fmuddyriver@amail.com",
+      "password": "frost"
+    },
+    {
+      "id": 3,
+      "name": "Jade Mountaintree",
+      "rewardsMember": true,
+      "email": "j.mountaintree@amail.com",
+      "password": "jade"
+    },
+    {
+      "id": 4,
+      "name": "Tester",
+      "rewardsMember": false,
+      "email": "test@test.com",
+      "password": "test"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerId": 4,
+      "statusId": 1,
+      "timestamp": ""
+    }
+  ],
+  "orderProducts": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "productId": 1
+    },
+    {
+      "id": 2,
+      "orderId": 1,
+      "productId": 2
+    },
+    {
+      "id": 3,
+      "orderId": 1,
+      "productId": 3
+    }
+  ],
+  "statuses": [
+    {
+      "id": 1,
+      "label": "Ready for Pickup"
+    },
+    {
+      "id": 2,
+      "label": "Being prepared"
+    },
+    {
+      "id": 3,
+      "label": "Scheduled"
+    }
+  ]
+}
