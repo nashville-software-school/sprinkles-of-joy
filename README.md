@@ -23,26 +23,30 @@ We want you to know that the login code we have given you is fake, completely in
 What do the status codes in HTTP responses mean? Check it out [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 ## Features
+
 ### Reviews
   1. A customer can see all reviews for a product. Does the current database store reviews? How will your ERD need to change?
   1. An authenticated customer can add a review for any product on the menu. Along with the review text, a customer can also provide a rating using the numbers 1-5.
-  1. A authenticated customer can delete any review they wrote. A customer cannot delete a review another customer wrote.
+  1. An authenticated customer can delete any review they wrote. A customer cannot delete a review another customer wrote.
+
 ### Customer's Order History
   1. A customer's order history should only list the orders they have placed, no other customer's orders should be displayed. 
   1. When a customer views their order history, each product in the order should be displayed. 
   1. The total cost for each order should also be displayed.
   1. A customer may delete any past order with the status of `Ready for Pickup`.
+
 ### Contact Form
   1. When the customer clicks the *Contact* link in the navbar, they should be presented with a form.
   1. The form should allow them to provide an email, a phone number and the message they want to communicate.
   1. When the form is submitted, the data the customer provided is saved.
 
 ### Menu
-  1. When the user selects the first option in the menu category dropdown, the customer should see the all the products.
+  1. When the customer selects the first option in the menu category dropdown, the customer should see the all the products.
 
 ### Customer's Shopping Cart
   1. After an order is placed, the cart should be reset to contain zero products.
   1. The *Place Order* button is disabled when there are no items in the cart.
+
 ### Logout
   1. Provide an affordance for the customer to log out of their account.
   1. When a customer logs out, the customer portal should not display any user specific information. Instead the customer sees the login form.
@@ -52,6 +56,7 @@ What do the status codes in HTTP responses mean? Check it out [here](https://dev
 1. Write a good README for the application.
 
 ## Stretch Goals
+
 ### Rewards Program
   1. In the customer portal, next to the welcome message, indicate to the customer visually if they are part of the rewards program.
   1. If they are not part of the rewards program, provide an affordance for them to join the rewards program. Be sure to update the database.
