@@ -31,5 +31,8 @@ eventHub.addEventListener("categorySelected", event => {
   if (selectedCategory !== "0") {
     bakeryProducts = useProducts().filter(product => product.categoryId === parseInt(selectedCategory))
     render()
+  } else {
+    bakeryProducts = useProducts()
+    render()
   }
 })

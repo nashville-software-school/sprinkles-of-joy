@@ -1,8 +1,8 @@
 export const Order = (customerOrder) => {
   return `
     <div class="order">
-        <p>Status: ${customerOrder.status.label}</p>
-        <p>Order placed at ${customerOrder.timestamp}</p>
+      <p>${new Date(customerOrder.timestamp).toLocaleString('en-US')}</p>
+      <p>${customerOrder.status.label}</p>
     </div>
   `
 }

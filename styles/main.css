@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+@import './modal.css';
+@import './customer.css';
+@import './nav.css';
+
 
 /*Typography
 --------------------------------------------------------------*/
@@ -18,6 +22,15 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
-.mainContainer {
+.mainContainer, .baked_good__header {
 	display: flex;
+	justify-content: space-between;
+}
+
+.customerSection {
+	flex-basis: 32%;
+}
+
+.menuSection {
+	flex-basis: 62%;
 }

@@ -56,3 +56,5 @@ eventHub.addEventListener("click", e => {
     eventHub.dispatchEvent(customEvent)
   }
 })
+
+eventHub.addEventListener("showLoginForm", LoginForm)

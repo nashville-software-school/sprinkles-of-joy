@@ -2,11 +2,12 @@ console.log("Welcome to the main module")
 
 import { CategorySelect } from "./categories/CategorySelect.js"
 import { LoginForm } from "./customers/LoginForm.js"
-import { OrderList } from "./orders/OrderList.js"
+import "./orders/OrderList.js"
 import { ProductList } from "./products/ProductList.js"
 import "./customers/RegisterForm.js"
+import { CustomerNav } from "./customers/CustomerNav.js"
 
 CategorySelect()
 ProductList()
 LoginForm()
-OrderList()
+CustomerNav()

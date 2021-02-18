@@ -4,12 +4,13 @@ import { Order } from "./Order.js"
 import { getOrders, useOrders } from "./OrderProvider.js"
 
 const eventHub = document.querySelector("#container")
-const contentTarget = document.querySelector(".userOrders")
+const contentContainer = document.querySelector(".userOrders")
 
 let customerOrders = []
 
 export const OrderList = () => {
   if (authHelper.isUserLoggedIn()) {
+
     getOrders(authHelper.getCurrentUserId())
       .then(() => {
         customerOrders = useOrders()
@@ -21,20 +22,30 @@ export const OrderList = () => {
 const render = () => {
   const ordersHtmlRepresentation = customerOrders.map(order => Order(order)).join("")
 
-
-  const loggedInUserId = authHelper.getCurrentUserId()
-  getCustomer(loggedInUserId)
-    .then(userObject => {
-
-      contentTarget.innerHTML = `
-        <button id="newOrder">Start a New Order</button>
-        <h3>${userObject.name}'s Orders</h3>
-        <div>${ordersHtmlRepresentation}</div>
+  contentContainer.innerHTML = `
+  <div id="orders__modal" class="modal--parent">
+        <div class="modal--content">
+        <h3>Previous Orders</h3>
+        <div>
+        <h5>Ordered on</h5>
+        ${ordersHtmlRepresentation}
+        </div>
+        <button id="modal--close">Close</button>
+        </div>
+    </div>
       `
-    })
 }
 
-eventHub.addEventListener("userLoggedIn", event => {
-  debugger
+eventHub.addEventListener("showPastOrders", e => {
   OrderList()
 })
+
+eventHub.addEventListener("click", event => {
+  if (event.target.id === "modal--close") {
+    closeModal()
+  }
+})
+
+const closeModal = () => {
+  contentContainer.innerHTML = ""
+}

@@ -3,26 +3,34 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Nashville Software School</title>
+    <title>Sprinkle of Joy</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
     <main id="container">
         <header>
-            <nav class="navigation"></nav>
+            <nav class="navContainer">
+                <img src="./images/logo_200x200.png" alt="sprinkle of joy logo">
+                <ul class="navigation">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <div class="mainContent">
-            <section>
+        <div class="mainContainer">
+            <section class="customerSection">
+                <h2>Customer Portal</h2>
+                <article class="userNav"></article>
+                <article class="form__login"></article>
+                <article class="form__register"></article>
+                <article class="userCart"></article>
+                <article class="userOrders"></article>
+            </section>
+            <section class="menuSection">
                 <h2>Menu</h2>
                 <article class="filter__category"></article>
                 <article class="menu__items"></article>
-            </section>
-            <section>
-                <h2>Customer Portal</h2>
-                <article class="form__login"></article>
-                <article class="form__register"></article>
-                <article class="userOrders"></article>
             </section>
         </div>
 

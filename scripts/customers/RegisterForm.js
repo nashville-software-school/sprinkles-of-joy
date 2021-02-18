@@ -14,6 +14,7 @@ const render = () => {
   if (!authHelper.isUserLoggedIn()) {
     contentTarget.innerHTML = `
       <h3>Register for a customer account</h3>
+      <p>Already have an account? Login <a href="#" id="link__login">here</a>.</p>
       <form>
         <fieldset>
         <label for="register-firstName">First: </label>
@@ -42,3 +43,12 @@ const render = () => {
 }
 
 eventHub.addEventListener("showRegisterForm", RegisterForm)
+
+eventHub.addEventListener("click", evt => {
+  if (evt.target.id === "link__login") {
+    contentTarget.innerHTML = ""
+
+    const customEvent = new CustomEvent("showLoginForm")
+    eventHub.dispatchEvent(customEvent)
+  }
+})
