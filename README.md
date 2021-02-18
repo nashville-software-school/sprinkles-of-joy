@@ -13,7 +13,7 @@ Add a pull request template for this project with these [instructions](https://d
 
 ## ERD
 
-Your very first step is to create an Entity Relationship Diagram and get it approved by an instructor. Take a look at your database and use either dbdiagram.io or Lucidchart to build the ERD. Once your ERD has been approved, be sure to add a link to it in your ERD. If at any time during this project, your team needs to modify your ERD, please communicate the changes and get approval.
+Your very first step is to create an Entity Relationship Diagram and get it approved by an instructor. Take a look at your database and use either dbdiagram.io or Lucidchart to build the ERD. Once your ERD has been approved, be sure to add a link to it in your README. If at any time during this project, your team needs to modify your ERD, please communicate the changes and get approval.
 
 ## A Note About Authentication
 
