@@ -20,19 +20,8 @@ export const ProductList = () => {
 
 const render = () => {
   contentTarget.innerHTML = bakeryProducts.map(product => {
-    const productCategory = bakeryCategories.find(category => category.id === product.categoryId)
+    const productCategory = bakeryCategories.find(category => cat.id === product.categoryId)
 
     return Product(product, productCategory)
   }).join("")
 }
-
-eventHub.addEventListener("categorySelected", event => {
-  const selectedCategory = event.detail.selectedCategory
-  if (selectedCategory !== "0") {
-    bakeryProducts = useProducts().filter(product => product.categoryId === parseInt(selectedCategory))
-    render()
-  } else {
-    bakeryProducts = useProducts()
-    render()
-  }
-})

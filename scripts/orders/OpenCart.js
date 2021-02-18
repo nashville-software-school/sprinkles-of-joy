@@ -20,7 +20,7 @@ const render = () => {
     cartHTML += `
       <div class="cart">
         <p>${product.name}</p>
-        <p>$${product.price}</p>
+        <p>$${product.price.toFixed(2)}</p>
       </div>
     `
     totalCost += product.price
@@ -29,12 +29,12 @@ const render = () => {
   userCart.innerHTML = `
     <div>
     <h4>Cart</h4>
+    ${cartHTML}
+    <hr/>
     <div class="cart">
-    <p>Items</p>
+    <button id="placeOrder">Place Order</button>
     <p>$${totalCost.toFixed(2)}</p>
     </div>
-    ${cartHTML}
-    <button id="placeOrder">Place Order</button>
     </div>
   `
 }
@@ -67,10 +67,6 @@ eventHub.addEventListener("click", clickEvent => {
         }
 
         return saveOrder(newOrder, productsInCart)
-      })
-      .then(() => {
-        productsInCart = []
-        OpenCart()
       })
   }
 })

@@ -11,7 +11,7 @@ let customerOrders = []
 export const OrderList = () => {
   if (authHelper.isUserLoggedIn()) {
 
-    getOrders(authHelper.getCurrentUserId())
+    getOrders()
       .then(() => {
         customerOrders = useOrders()
         render()
@@ -36,7 +36,7 @@ const render = () => {
       `
 }
 
-eventHub.addEventListener("showPastOrders", () => {
+eventHub.addEventListener("showOrderHistory", () => {
   OrderList()
 })
 
