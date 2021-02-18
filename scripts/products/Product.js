@@ -1,14 +1,28 @@
+const eventHub = document.querySelector("#container")
+
 export const Product = (product, category) => {
-  return `
+    return `
       <section class="baked_good">
           <header class="baked_good__header">
               <h4>${product.name}</h4>
-              <p>${category.name}</p>
+              <p>$${product.price}</p>
           </header>
           <div>
-              <p>$${product.price}</p>
-              <p>${product.description}</p>
+              <button id="addProduct--${product.id}">Add to Cart</button>
+              <p>${product.description} [${category.name}]</p>
           </div>
       </section>
   `
 }
+
+eventHub.addEventListener("click", evt => {
+    if (evt.target.id.startsWith("addProduct--")) {
+        const [prefix, productId] = evt.target.id.split("--")
+        const addProductEvent = new CustomEvent("addToCart", {
+            detail: {
+                productId: parseInt(productId)
+            }
+        })
+        eventHub.dispatchEvent(addProductEvent)
+    }
+})

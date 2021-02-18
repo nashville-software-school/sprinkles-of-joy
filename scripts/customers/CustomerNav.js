@@ -17,7 +17,7 @@ const render = (customer) => {
   userNav.innerHTML = `
     <h3>Welcome ${customer.name}!</h3>
     <ul class="userNav__links">
-    <li class="userNav__link" id="userNav--newOrder">Cart</li>
+    <li class="userNav__link" id="userNav--showCart">Cart</li>
     <li class="userNav__link" id="userNav--newReview">New Review</li>
     <li class="userNav__link" id="userNav--pastOrders">Past Orders</li>
     </ul>
@@ -33,8 +33,8 @@ eventHub.addEventListener("click", event => {
     const [idPrefix, idSuffix] = event.target.id.split("--")
     let customEvent
     switch (idSuffix) {
-      case "newOrder":
-        customEvent = new CustomEvent("showNewOrderForm")
+      case "showCart":
+        customEvent = new CustomEvent("showCustomerCart")
         break;
       case "newReview":
         customEvent = new CustomEvent("showNewReviewForm")
