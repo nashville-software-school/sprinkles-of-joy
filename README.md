@@ -19,6 +19,9 @@ Your very first step is to create an Entity Relationship Diagram and get it appr
 
 We want you to know that the login code we have given you is fake, completely insecure, and would never be implemented in a professional application. It is a simulation authentication using very simplistic tools, because authentication is not a learning objective of students at NSS. You will be using [session storage](https://javascript.info/localstorage#sessionstorage) to keep track of which user has logged into the application.
 
+## HTTP Response Status Codes
+What do the status codes in HTTP responses mean? Check it out [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
 ## Features
 ### Reviews
   1. A customer can see all reviews for a product. Does the current database store reviews? How will your ERD need to change?
@@ -43,6 +46,10 @@ We want you to know that the login code we have given you is fake, completely in
 ### Logout
   1. Provide an affordance for the customer to log out of their account.
   1. When a customer logs out, the customer portal should not display any user specific information. Instead the customer sees the login form.
+
+## User experiance & README
+1. Before your team moves on to the stretch goals, take some time to add some styling to improve the user experiance of the application 
+1. Write a good README for the application.
 
 ## Stretch Goals
 ### Rewards Program
