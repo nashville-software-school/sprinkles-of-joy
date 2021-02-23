@@ -51,7 +51,7 @@ What do the status codes in HTTP responses mean? Check it out [here](https://dev
   1. Provide an affordance for the customer to log out of their account.
   1. When a customer logs out, the customer portal should not display any user specific information. Instead the customer sees the login form.
 
-## User experiance & README
+## User experience & README
 1. Before your team moves on to the stretch goals, take some time to add some styling to improve the user experiance of the application 
 1. Write a good README for the application.
 
